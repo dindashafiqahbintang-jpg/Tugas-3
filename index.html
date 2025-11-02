@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Komunitas Teknologi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-top: 30px;
+    }
+
+    form {
+      width: 80%;
+      max-width: 500px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    fieldset {
+      border: 1px solid #5b86e5;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #5b86e5;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=number],
+    input[type=date],
+    input[type=tel],
+    input[type=url],
+    input[type=file] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .gender, .minat {
+      margin-top: 5px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .submit {
+      background-color: #5b86e5;
+      color: white;
+    }
+
+    .reset {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .submit:hover {
+      background-color: #4b70d1;
+    }
+
+    .reset:hover {
+      background-color: #d9362d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Formulir Pendaftaran Komunitas Teknologi</h1>
+
+  <!-- Elemen form sesuai instruksi tugas -->
+  <form action="submit.html" method="post" enctype="multipart/form-data" autocomplete="on">
+
+    <fieldset>
+      <legend>Data Pribadi</legend>
+
+      <label>Nama Lengkap:</label>
+      <input type="text" name="nama" placeholder="Masukkan nama lengkap" required>
+
+      <label>Alamat Email:</label>
+      <input type="email" name="email" placeholder="contoh@email.com" required>
+
+      <label>Kata Sandi:</label>
+      <input type="password" name="password" placeholder="Minimal 8 karakter" pattern=".{8,}" required>
+
+      <label>Usia:</label>
+      <input type="number" name="usia" min="15" max="100" required>
+
+      <label>Tanggal Lahir:</label>
+      <input type="date" name="tgl" required>
+
+      <label>Jenis Kelamin:</label>
+      <div class="gender">
+        <input type="radio" name="gender" value="Laki-laki" required> Laki-laki
+        <input type="radio" name="gender" value="Perempuan" required> Perempuan
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Informasi Tambahan</legend>
+
+      <label>Minat:</label>
+      <div class="minat">
+        <input type="checkbox" name="minat" value="AI"> AI
+        <input type="checkbox" name="minat" value="Web"> Web
+        <input type="checkbox" name="minat" value="IoT"> IoT
+        <input type="checkbox" name="minat" value="Game"> Game
+      </div>
+
+      <label>Nomor Telepon:</label>
+      <input type="tel" name="tel" placeholder="081234567890" pattern="[0-9]{10,13}" required>
+
+      <label>Link Portofolio:</label>
+      <input type="url" name="url" placeholder="https://contoh.com">
+
+      <label>Upload Foto Profil:</label>
+      <input type="file" name="foto" accept="image/*" required>
+    </fieldset>
+
+    <div class="button-container">
+      <button type="reset" class="reset">Reset</button>
+      <button type="submit.html" class="submit">Kirim</button>
+    </div>
+
+  </form action="submit.html"method="post">
+
+</body>
+</html>
